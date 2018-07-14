@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom'
-import SearchPage from './SearchPage'
-import Category from './Category'
+import SearchPage from './components/SearchPage'
+import Category from './components/Category'
 import * as BooksAPI from './BooksAPI'
 import './App.css'
 
