@@ -19,11 +19,12 @@ class SearchPage extends Component {
        BooksAPI.search(query.trim(), 18).then(searchResults => {
              if (searchResults.error) {
                  searchResults = [];
+                 alert('Sorry! The book you are searching is not included in this library.');
              }
              searchResults = searchResults.map((book) => {
-                 const bookShelf = this.props.books.find(b => b.id === book.id)
-                 if (bookShelf) {
-                     book.shelf = bookShelf.shelf;
+                 const category = this.props.books.find(b => b.id === book.id)
+                 if (category) {
+                     book.shelf = category.shelf;
                  }
                  else {
                    book.shelf = 'none'
