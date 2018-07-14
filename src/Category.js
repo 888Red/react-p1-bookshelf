@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {Component} from 'react';
 import Book from './Book'
 
-class Category extends React.Component {
+class Category extends Component {
+
   render() {
     const {title, books, moveShelf} = this.props
     return (
@@ -12,7 +13,10 @@ class Category extends React.Component {
             {
               books.map((book) => {
                 return <li key={book.id}>
-                 <Book book={book} moveShelf={moveShelf}/>
+                    <Book
+                      book={book}
+                      moveShelf={moveShelf}
+                    />
                 </li>
               })
             }
