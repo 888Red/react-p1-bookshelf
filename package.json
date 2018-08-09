@@ -1,6 +1,11 @@
 {
+  "name": "react-p1-bookshelf",
+  "version": "0.1.0",
+  "homepage": "https://888red.github.io/react-p1-bookshelf/",
+  "private": true,
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
+    "gh-pages": "^1.2.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -11,6 +16,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
